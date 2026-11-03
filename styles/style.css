@@ -449,14 +449,11 @@ a:focus {
     justify-content: center;
     align-content: start;
     margin: 0;
+    margin-top: -25px;
   }
 
   .header__theme-menu-list {
     flex-direction: row;
-  }
-
-  .header__theme-menu {
-    margin-top: -25px;
   }
 
   .title_nofocus {
