@@ -173,7 +173,7 @@ a {
 .sect_gallery {
   display: flex;
   flex-direction: column;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .mnogozadachnost, 
@@ -339,11 +339,11 @@ a:focus {
   }
 
   .sect_5-sovetov {
-    display: grid;  
-    grid-template-columns: 1fr 2fr; 
-    grid-template-rows: auto auto auto auto auto auto;  
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas:
-    "title h3" 
+    "title h3"
     "title nebo_oblaka"
     "title musica"
     "title progulyaites"
@@ -357,12 +357,29 @@ a:focus {
     margin: 0;
   }
 
-  .sect_5-sovetov h3 { grid-area: h3; }
-  .nebo_oblaka { grid-area: nebo_oblaka; }
-  .musica { grid-area: musica; }
-  .progulyaites { grid-area: progulyaites; }
-  .horosho_eshte { grid-area: horosho_eshte; } 
-  .chitaite { grid-area: chitaite; }
+  .sect_5-sovetov h3 {
+    grid-area: h3;
+  }
+
+  .nebo_oblaka {
+    grid-area: nebo_oblaka;
+  }
+
+  .musica {
+    grid-area: musica;
+  }
+
+  .progulyaites {
+    grid-area: progulyaites;
+  }
+
+  .horosho_eshte {
+    grid-area: horosho_eshte;
+  }
+
+  .chitaite {
+    grid-area: chitaite;
+  }
 
   .sect_gallery {
     margin-top: 30px;
@@ -370,9 +387,9 @@ a:focus {
 
   .pictures {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 192fr 228fr 318fr;
-    grid-template-areas: 
+    grid-template-areas:
     "sunset_png sunset_png ice-cream_png"
     "tape_png books_png ice-cream_png"
     "tape_png street_png street_png";
@@ -387,11 +404,25 @@ a:focus {
     object-fit: cover;
   }
 
-  .sunset_png { grid-area: sunset_png; }
-  .ice-cream_png { grid-area: ice-cream_png; }
-  .tape_png { grid-area: tape_png; }
-  .books_png { grid-area: books_png; }
-  .street_png { grid-area: street_png; }
+  .sunset_png {
+    grid-area: sunset_png;
+  }
+
+  .ice-cream_png {
+    grid-area: ice-cream_png;
+  }
+
+  .tape_png {
+    grid-area: tape_png;
+  }
+
+  .books_png {
+    grid-area: books_png;
+  }
+
+  .street_png {
+    grid-area: street_png;
+  }
 
   .footer {
     margin-top: 40px;
