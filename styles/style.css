@@ -2,4 +2,462 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
+  max-width: 767.99px;
+  background-color: var(--bg_main);
+  background-image: var(--bg_header);
+  line-height: 23.4px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+/* #region header ============================================================================================================================ */
+
+/* #region hedader общие */
+.header {
+  height: 100dvh;
+  min-height: 668px;
+}
+
+.decorated-zone {
+  position: relative;
+  padding: 10px;
+}
+/* #endregion hedader общие */
+
+/* #region уголки */
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 1px solid transparent;
+}
+
+.decorated-zone::before {
+  bottom: 10px;
+  left: 10px;
+  border-left-color: var(--ugl_color);
+  border-bottom-color: var(--ugl_color);
+}
+
+.decorated-zone::after {
+  top: 10px;
+  right: 10px;
+  border-top-color: var(--ugl_color);
+  border-right-color: var(--ugl_color);
+}
+/* #endregion уголки*/
+
+/* #region rec + точка */
+.rec {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+  justify-content: flex-end;
+  margin-right: 9px;
+  font-size: var(--text_size);
+}
+
+.rec::after {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 9px;
+  background-color: var(--ugl_color);
+  border-radius: 50%;
+  box-shadow: 
+  0 0 0 1px color-mix(in srgb, var(--ugl_color) 70%, transparent),
+  0 0 0 2px color-mix(in srgb, var(--ugl_color) 50%, transparent),
+  0 0 0 3px color-mix(in srgb, var(--ugl_color) 30%, transparent);
+}
+
+.rec p {
+  color: var(--ugl_color);
+  text-transform: uppercase;
+}
+/* #endregion rec + точка */
+
+/* #region переключение тем */
+.header__theme-menu {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+}
+
+.header__theme-menu-button {
+  padding: 0px 13px;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: var(--h2_color);
+  font-size: var(--text_size);
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  border: 2px solid var(--h2_color);
+  padding-bottom: 3px;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--h2_color);
+  padding-bottom: 3px;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+  text-decoration-style: solid;
+  text-decoration-color: var(--h2_color);
+  text-decoration-thickness: 2px;
+}
+/* #endregion переключение тем */
+
+/* #region заголовок */
+.title_nofocus {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  align-content: center;
+  font-size: var(--h1_size);
+  margin-top: 65px;
+  line-height: 83%;
+  color: var(--h1_color);
+  text-shadow: 5px 4px 0 var(--h1_shadow);
+}
+/* #endregion заголовок */
+
+/* #region текст под заголовком */
+.header_text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 52px;
+  word-spacing: -0.05rem;
+}
+/* #endregion текст под заголовком */
+/* #endregion header ===================================================================================================================== */
+/* #region main ============================================================================================================================== */
+.main {
+  padding: 0 10px 40px;
+  font-size: var(--text_size);
+  margin-top: -10px;
+}
+
+h2,
+h3,
+h4,
+p,
+a {
+  font-size: var(--text_size);
+}
+
+.sect_mnogoz-dof, 
+.sect_konc-eda-gadj, 
+.sect_5-sovetov, 
+.sect_gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.mnogozadachnost, 
+.dofamin, 
+.koncentraciya, 
+.eda, 
+.gadjety, 
+.nebo_oblaka, 
+.musica, 
+.progulyaites, 
+.horosho_eshte,
+.chitaite {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h2 {
+  color: var(--h2_color);
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+h3, h4 {
+  color: var(--h3_h4_color);
+  background-color: var(--bg_title);
+  font-weight: bold;
+}
+
+h4 {
+  font-weight: normal;
+}
+
+p {
+  color: var(--p_color);
+  font-weight: normal;
+}
+
+/*links*/
+a {
+  text-shadow: 3px 1.5px 0 var(--a_shadow);
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid var(--a_color);
+}
+
+a:focus {
+  border: 1px solid var(--a_color);
+  border-radius: 0;
+}
+
+/* gallery */
+.sect_gallery {
+  padding-top: 49px;
+  gap: 10px;
+}
+
+.pictures {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sect_gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* #endregion main =========================================================================================================================== */
+/* #region footer ============================================================================================================================ */
+
+.footer {
+  height: 100dvh;
+  min-height: 668px;
+  align-content: center;
+}
+
+.footer h2 {
+  display: flex;
+  justify-content: center;
+  font-size: var(--h1_size);
+  color: var(--h_footer);
+  text-shadow: 3px 2px 0 var(--h_footer_shadow);
+  margin-top: 0px;
+}
+/* #endregion footer ========================================================================================================================= */
+
+@media (width > 768px) {
+  
+  .page {
+    min-width: 768px;
+  }
+  
+  .header {
+    min-height: 768px;
+    padding: 20px;
+  }
+
+  .decorated-zone::before {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .decorated-zone::after {
+    top: 20px;
+    right: 20px;
+  }
+
+  .header__theme-menu {
+    margin-top: 147px;
+  }
+
+  .title_nofocus {
+    margin-top: 171px;
+    justify-content: start;
+    margin-left: -20px;
+    white-space: nowrap;
+  }
+
+  .header_text {
+    margin-top: 162px;
+    justify-self: end;
+    width: 50%;
+    padding-right: 10px;
+  }
+
+  .main {
+    padding: 20px;
+  }
+
+  .sect_mnogoz-dof {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "title mnogozadachnost"
+    "title dofamin";
+    margin-top: 50px;
+  }
+
+  .sect_mnogoz-dof h2 {
+    grid-area: title;
+    margin: 0;
+  }
+
+  .mnogozadachnost {
+    grid-area: mnogozadachnost;
+  }
+
+  .dofamin {
+    grid-area: dofamin;
+  }
+
+  .sect_konc-eda-gadj {
+    padding-top: 30px;
+  }
+
+  .sect_konc-eda-gadj h2 {
+    width: 30%;
+  }
+
+  .sect_5-sovetov {
+    display: grid;  
+    grid-template-columns: 1fr 2fr; 
+    grid-template-rows: auto auto auto auto auto auto;  
+    grid-template-areas:
+    "title h3" 
+    "title nebo_oblaka"
+    "title musica"
+    "title progulyaites"
+    "title horosho_eshte"
+    "title chitaite";
+    margin-top: 80px;
+  }
+
+  .sect_5-sovetov h2 {
+    grid-area: title;
+    margin: 0;
+  }
+
+  .sect_5-sovetov h3 { grid-area: h3; }
+  .nebo_oblaka { grid-area: nebo_oblaka; }
+  .musica { grid-area: musica; }
+  .progulyaites { grid-area: progulyaites; }
+  .horosho_eshte { grid-area: horosho_eshte; } 
+  .chitaite { grid-area: chitaite; }
+
+  .sect_gallery {
+    margin-top: 30px;
+  }
+
+  .pictures {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 192fr 228fr 318fr;
+    grid-template-areas: 
+    "sunset_png sunset_png ice-cream_png"
+    "tape_png books_png ice-cream_png"
+    "tape_png street_png street_png";
+    gap: 20px;
+    margin-top: 10px;
+  }
+  
+  .pictures img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sunset_png { grid-area: sunset_png; }
+  .ice-cream_png { grid-area: ice-cream_png; }
+  .tape_png { grid-area: tape_png; }
+  .books_png { grid-area: books_png; }
+  .street_png { grid-area: street_png; }
+
+  .footer {
+    margin-top: 40px;
+  }
+}
+
+@media (width > 1024px) {
+  
+  .page {
+    min-width: 1024px;
+  }
+
+  .header {
+    min-height: 768px;
+  }
+
+  .header__theme-menu {
+    justify-content: center;
+    align-content: start;
+    margin: 0;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .header__theme-menu {
+    margin-top: -25px;
+  }
+
+  .title_nofocus {
+    margin-top: 272px;
+  }
+
+  .header_text {
+    margin-top: 113px;
+  }
+
+  .sect_mnogoz-dof {
+    gap: 20px 10px;
+  }
+
+  .sect_konc-eda-gadj {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto auto auto; 
+    grid-template-areas: 
+    "h2 h2 h2"
+    "koncentraciya eda gadjety"
+    "koncentraciya_p eda_p gadjety_p";
+  }
+  
+  .sect_konc-eda-gadj h2 { grid-area: h2; }
+  .koncentraciya { grid-area: koncentraciya; }
+  .koncentraciya p { grid-area: koncentraciya_p; }
+  .eda { grid-area: eda; }
+  .eda p { grid-area: eda_p; }
+  .gadjety { grid-area: gadjety; }
+  .gadjety p { grid-area: gadjety_p; }
+
+  .sect_5-sovetov {
+    margin-top: 60px;
+    gap: 20px 10px;
+  }
+
+  .pictures {
+    grid-template-rows: 188fr 228fr 314fr;
+  }
 }

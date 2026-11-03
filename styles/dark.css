@@ -9,4 +9,43 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --bg_header: url(../images/cover-image-dark.png);
+  --bg_main: rgba(0, 0, 40, 1);
+  --bg_title: rgba(255, 0, 112, 1);
+  --h1_color: rgba(219, 0, 255, 1);
+  --h2_color: rgba(255, 0, 112, 1);
+  --h3_h4_color: rgba(0, 0, 40, 1);
+  --p_color: rgba(241, 178, 206, 1);
+  --a_color: rgba(241, 178, 206, 1);
+  --h_footer: rgba(219, 0, 255, 1);
+  --ugl_color: rgba(255, 0, 112, 1);
+  --h1_shadow: rgba(255, 0, 112, 1);
+  --h_footer_shadow: rgba(255, 0, 112, 1);
+  --a_shadow: rgba(255, 0, 112, 1);
+
+  .rec {
+    visibility: visible;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html.theme-auto {
+    --bg_header: url(../images/cover-image-dark.png);
+    --bg_main: rgba(0, 0, 40, 1);
+    --bg_title: rgba(255, 0, 112, 1);
+    --h1_color: rgba(219, 0, 255, 1);
+    --h2_color: rgba(255, 0, 112, 1);
+    --h3_h4_color: rgba(0, 0, 40, 1);
+    --p_color: rgba(241, 178, 206, 1);
+    --a_color: rgba(241, 178, 206, 1);
+    --h_footer: rgba(219, 0, 255, 1);
+    --ugl_color: rgba(255, 0, 112, 1);
+    --h1_shadow: rgba(255, 0, 112, 1);
+    --h_footer_shadow: rgba(255, 0, 112, 1);
+    --a_shadow: rgba(255, 0, 112, 1);
+
+    .rec {
+      visibility: visible;
+    }
+  }
 }
