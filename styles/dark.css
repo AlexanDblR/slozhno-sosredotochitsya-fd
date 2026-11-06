@@ -11,7 +11,7 @@
   */
   --header-background: url(../images/cover-image-dark.png);
   --main-background: rgba(0, 0, 40, 1);
-  --title-backgrounde: rgba(255, 0, 112, 1);
+  --title-background: rgba(255, 0, 112, 1);
   --main-title-color: rgba(219, 0, 255, 1);
   --section-title-color: rgba(255, 0, 112, 1);
   --article-title-color: rgba(0, 0, 40, 1);
@@ -25,27 +25,5 @@
 
   .rec {
     visibility: visible;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg_header: url(../images/cover-image-dark.png);
-    --main-background: rgba(0, 0, 40, 1);
-    --title-background: rgba(255, 0, 112, 1);
-    --main-title-color: rgba(219, 0, 255, 1);
-    --section-title-color: rgba(255, 0, 112, 1);
-    --article-title-color: rgba(0, 0, 40, 1);
-    --paragraph-color: rgba(241, 178, 206, 1);
-    --link-color: rgba(241, 178, 206, 1);
-    --footer-title-color: rgba(219, 0, 255, 1);
-    --decoration-color: rgba(255, 0, 112, 1);
-    --main-title-shadow: rgba(255, 0, 112, 1);
-    --footer-title-shadow: rgba(255, 0, 112, 1);
-    --link-shadow: rgba(255, 0, 112, 1);
-
-    .rec {
-      visibility: visible;
-    }
   }
 }
