@@ -44,9 +44,12 @@ p {
 }
 
 .marked-title_regular {
-  font-weight: bold;
+  font-weight: normal;
 }
 
+.section-gallery h2 {
+  font-weight: bold;
+}
 /* ссылки */
 a {
   text-shadow: 2px 2px 0 var(--link-shadow);
